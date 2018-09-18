@@ -24,6 +24,8 @@ def call(final pipelineContext) {
                         hasJUnit = false
                         archiveFiles = false
                         makefilePath = pipelineContext.getBuildConfig().MAKEFILE_PATH
+                        activatePythonEnv = true
+                        activateR = true
                     }
                     findAutoMLTests(pipelineContext, pipelineContext.getBuildConfig().COMPONENT_PY)
                     makeTarget(pipelineContext) {
@@ -31,6 +33,8 @@ def call(final pipelineContext) {
                         hasJUnit = false
                         archiveFiles = false
                         makefilePath = pipelineContext.getBuildConfig().MAKEFILE_PATH
+                        activatePythonEnv = true
+                        activateR = true
                     }
                     findAutoMLTests(pipelineContext, pipelineContext.getBuildConfig().COMPONENT_R)
                     makeTarget(pipelineContext) {
@@ -38,6 +42,8 @@ def call(final pipelineContext) {
                         hasJUnit = false
                         archiveFiles = false
                         makefilePath = pipelineContext.getBuildConfig().MAKEFILE_PATH
+                        activatePythonEnv = true
+                        activateR = true
                     }
                     if (pipelineContext.getBuildConfig().getBuildHadoop()) {
                         makeTarget(pipelineContext) {
@@ -45,6 +51,8 @@ def call(final pipelineContext) {
                             hasJUnit = false
                             archiveFiles = false
                             makefilePath = pipelineContext.getBuildConfig().MAKEFILE_PATH
+                            activatePythonEnv = true
+                            activateR = true
                         }
                     }
                     if (pipelineContext.getBuildConfig().componentChanged(pipelineContext.getBuildConfig().COMPONENT_JS)) {
@@ -53,6 +61,8 @@ def call(final pipelineContext) {
                             hasJUnit = false
                             archiveFiles = false
                             makefilePath = pipelineContext.getBuildConfig().MAKEFILE_PATH
+                            activatePythonEnv = true
+                            activateR = true
                         }
                     }
                     if (pipelineContext.getBuildConfig().componentChanged(pipelineContext.getBuildConfig().COMPONENT_JAVA)) {
@@ -61,6 +71,8 @@ def call(final pipelineContext) {
                             hasJUnit = false
                             archiveFiles = false
                             makefilePath = pipelineContext.getBuildConfig().MAKEFILE_PATH
+                            activatePythonEnv = true
+                            activateR = true
                         }
                     }
                 } finally {
